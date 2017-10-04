@@ -1,1 +1,1 @@
-J'aime bien les README donc j'en ai cr�e un.
+J'aime bien les README donc j'en ai créé un.
