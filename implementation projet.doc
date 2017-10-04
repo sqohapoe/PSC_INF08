@@ -65,11 +65,11 @@
 {\s11\fi-430\li2160\f2\fs24\lang1036\sbasedon36\snext36 Contents 3;}
 {\s12\fi-430\li2880\f2\fs24\lang1036\sbasedon36\snext36 Contents 4;}}
 {\*\listtable
-{\list\listtemplateid2059\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0\fi-360\li720{\leveltext\'01\u8226 ;}{\levelnumbers;}}\listid1037}
-{\list\listtemplateid2060\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0\fi-360\li720{\leveltext\'01\u8226 ;}{\levelnumbers;}}\listid1091}
-{\list\listtemplateid2061\listsimple{\listlevel\levelnfc0\levelstartat1\levelspace0\levelfollow0\fi-360\li720{\leveltext\'02\'00.;}{\levelnumbers\'01;}}\listid1064}
-{\list\listtemplateid2062\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0\fi-360\li720{\leveltext\'01\u8226 ;}{\levelnumbers;}}\listid1010}
-{\list\listtemplateid2063\listsimple{\listlevel\levelnfc23\levelstartat0\levelspace0\levelfollow0\fi-430\li720{\leveltext\'01\u8226 ;}{\levelnumbers;}}\listid1151}}
+{\list\listtemplateid2064\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0\fi-360\li720{\leveltext\'01\u8226 ;}{\levelnumbers;}}\listid1037}
+{\list\listtemplateid2065\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0\fi-360\li720{\leveltext\'01\u8226 ;}{\levelnumbers;}}\listid1091}
+{\list\listtemplateid2066\listsimple{\listlevel\levelnfc0\levelstartat1\levelspace0\levelfollow0\fi-360\li720{\leveltext\'02\'00.;}{\levelnumbers\'01;}}\listid1064}
+{\list\listtemplateid2067\listsimple{\listlevel\levelnfc23\levelstartat1\levelspace0\levelfollow0\fi-360\li720{\leveltext\'01\u8226 ;}{\levelnumbers;}}\listid1010}
+{\list\listtemplateid2068\listsimple{\listlevel\levelnfc23\levelstartat0\levelspace0\levelfollow0\fi-430\li720{\leveltext\'01\u8226 ;}{\levelnumbers;}}\listid1151}}
 {\*\listoverridetable
 {\listoverride\listoverridecount0\listid1037\levelnfc23\levelstartat1\levelspace0\levelfollow0\fi-360\li720{\leveltext\'01\u8226 ;}{\levelnumbers;}\ls1}
 {\listoverride\listoverridecount0\listid1091\levelnfc23\levelstartat1\levelspace0\levelfollow0\fi-360\li720{\leveltext\'01\u8226 ;}{\levelnumbers;}\ls2}
@@ -167,4 +167,8 @@
 \pard\plain\ltrpar\ql\s36\sl240\slmult1\itap0{\s36\f0\fs24\lang1036{\*\listtag0}\abinodiroverride\ltrch -> Id\'e9e:  Deux CPU ne peuvent pas lire la m\'eame instruction en m\'eame temps. Dans ce cas, un des CPU doit attendre sur l\uc1\u8217\'92instruction o\'f9 il \'e9tait pr\'e9c\'e9demment}{\s36\f0\fs24\lang1036{\*\listtag0}\par}
 \pard\plain\ltrpar\ql\s36\sl240\slmult1\itap0{\s36\f0\fs24\lang1036{\*\listtag0}\abinodiroverride\ltrch -> Id\'e9e compl\'e9mentaire : on garde l\uc1\u8217\'92instruction de mort.}{\s36\f0\fs24\lang1036{\*\listtag0}\par}
 \pard\plain\ltrpar\ql\s36\sl240\slmult1\itap0{\s36\f0\fs24\lang1036{\*\listtag0}\par}
-\pard\plain\ltrpar\ql\s36\sl240\slmult1\itap0{\s36\f0\fs24\lang1036{\*\listtag0}\par}}
+\pard\plain\ltrpar\ql\s36\sl240\slmult1\itap0{\s36\f0\fs24\b\lang1036{\*\listtag0}\abinodiroverride\ltrch Solutions \'e9tudi\'e9es pour d\'e9tecter les innovations}{\s36\f0\fs24\b\lang1036{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s36\sl240\slmult1\itap0{\s36\f0\fs24\lang1036{\*\listtag0}\abinodiroverride\ltrch -> On peut utiliser la distance de Hamming pour comparer les codes et voir ceux qui sont tr\'e8s diff\'e9rents les uns des autres. On garde une archive qui va stocker les \'abarch\'e9types\'bb de programme et va compter leur popularit\'e9.}{\s36\f0\fs24\lang1036{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s36\sl240\slmult1\itap0{\s36\f0\fs24\lang1036{\*\listtag0}\abinodiroverride\ltrch -> On combine ceci avec l\uc1\u8217\'92analyse du \'abcomportement\'bb des codes : quand un CPU interagit (i.e lit/\'e9crit) \'e0 un endroit, ont regarde combien de fois/o\'f9 il a \'e9crit et \'e7a nous donne une id\'e9e de son comportement.}{\s36\f0\fs24\lang1036{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s36\sl240\slmult1\itap0{\s36\f0\fs24\lang1036{\*\listtag0}\par}
+\pard\plain\ltrpar\ql\s36\sl240\slmult1\itap0{\s36\f0\fs24\lang1036{\*\listtag0}\abinodiroverride\ltrch Il semble irr\'e9alisable d\uc1\u8217\'92\'e9valuer qualitativement tous les codes int\'e9ressant, m\'eame si on peut faire des statistiques dessus.}{\s36\f0\fs24\lang1036{\*\listtag0}\par}}
