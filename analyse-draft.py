@@ -1,20 +1,19 @@
 # il faudrait mettre univ en paramètre de toutes mes fonctions ?
 
+univ = reconstitue(nom, t);
 
-def nb_CPUs(t) : ## assez inutile ?
+def CPUnumber(univ, t) : ## assez inutile ?
     "renvoie le nombre de CPUs présents dans la liste CPU[] de l'univers à la date t"
-    univ = reconstitue(t);
     return len(univ.CPU) ;
 
 
-def taux_colonisation(t) :
+def colonisationRate(univ, t) :
     "renvoie le taux de cases remplies dans la liste Memoire[] de l'univers à la date t"
-    univ = reconstitue(t);
-    nb_instructions = 0;
-    for i in univ.Memoire :
-        if i != None :       # ou is not ??
-            nb_instructions += 1;
-    return (nb_instructions/len(univ.Memoire)) ;
+    instructionsNb = 0;
+    for i in univ.Memory :
+        if i != None :
+            instructionsNb += 1;
+    return (instructionsNb/len(univ.Memory)) ;
 
 
 def individus_boucles(t) : # pas fini du tout !
@@ -22,11 +21,11 @@ def individus_boucles(t) : # pas fini du tout !
     # je ne sais plus s'il faut pouvoir retourner au début depuis la fin, où juste arriver à la fin depuis le début
     univ = reconstitue(t);
     N = len(univ.Memoire);   # devrait être une variable globale ?
-    debut_boucle = [None] * N;
+    loopStart = [None] * N;
     test = CPU() ;
     for i in range(N) :
-        if debut_boucle[i] == None :
-            debut_boucle[i] = i;
+        if loopStart[i] == None :
+            loopStart[i] = i;
             debut_courant = i;
             test.index = i;
             while ?? :
@@ -37,32 +36,31 @@ def individus_boucles(t) : # pas fini du tout !
     return debut_boucle;
 
 
-def taux_creation_CPUs(univ, t, intervalle) :
+def rateCreationCPUs(univ, t, interval) :
     "retourne le nombre moyen de CPUs créés par CPU existant et par an pendant l'intervalle de temps de longueur intervalle et commençant à la date t"
     univ = univ(t); # à écrire
-    nb_crees = 0;
+    nbCreated = 0;
     date = t;
-    nb_CPUs_courant = len(univ.CPU);
-    while date < t+intervalle :
-        univ.avance(1) ;
-        nb_crees += len(univ.CPU)/nb_CPUs_courant - 1 ; # ou faire une fonction qui calcule le nb de CPUs crées à la date t ?
-        nb_CPUs_courant = len(univ.CPU);
-    return (nb_crees/intervalle) ;
+    currentCPUnumber = len(univ.CPU);
+    while date < t+interval :
+        univ.forward(1) ;
+        nb_created += len(univ.CPU)/currentCPUnumber - 1 ; # ou faire une fonction qui calcule le nb de CPUs crées à la date t ?
+        currentCPUnumber = len(univ.CPU);
+    return (nb_created/interval) ;
 
 
-def densite_CPU(t) :
+def densityCPU(univ, t) :
     "affiche et renvoie la densite de CPU par site d'instruction occupé" #on pourrait faire par site d'instruction tout court ?
-    univ = reconstitue(t) ;
-    d = len(univ.CPU) / (taux_colonisation*len(univ.Memoire)) ;
+    d = len(univ.CPU) / (colonisationRate(univ)*len(univ.Memory)) ;
     print("La densité de CPU est {}, soit 1 CPU pour {} instructions".format(d, 1/d));
     return d;
 
 
-def nb_individus(t) :
+def nbIndividuals(t) :
     "renvoie le nombre d'individus-boucles"
 
-def nb_especes(t) :
+def nbSpecies(t) :
     "renvoie le nombre de codes différents parmi tous les individus-boucles identifiés"
 
-def distance_especes(??) :
+def speciesDistance(??) :
     "renvoie la distance d'édition entre les codes des deux espèces données en paramètre"
