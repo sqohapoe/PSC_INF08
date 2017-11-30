@@ -42,7 +42,7 @@ class Universe:
         a=len(CPU)
         k=n1
         while(k<=n1-8):
-            f.write(a>>k & 0b11111111))
+            f.write(a>>k & 0b11111111)
             k += 8
         temp=a>>k
         
